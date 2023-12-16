@@ -1,0 +1,101 @@
+$drop-shadow:
+  -12px -12px 30px 5px rgba(255, 255, 255, 0.9),
+  12px 12px 30px 5px rgba(50, 58, 73, 0.2);
+
+$inset-shadow:
+  inset -12px -12px 30px 5px rgba(255, 255, 255, 0.9),
+  inset 12px 12px 30px 5px rgba(50, 58, 73, 0.2);
+
+html {
+  background-color: #ECF0F3;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: flex;
+  margin: 25px auto 25px;
+  width: 1200px;
+}
+
+.col {
+  flex: 1;
+  width: 30%;
+}
+
+.shape {
+  margin: 25px auto 50px;
+}
+
+.shape-square {
+  border-radius: 35px;
+  height: 275px;
+  width: 275px;
+}
+
+.shape-circle {
+  border-radius: 50%;
+  position: relative;
+  height: 275px;
+  width: 275px;
+  
+  &::after {
+    content: "";
+    background-color: #ecf0f3;
+    border-radius: 50%;
+    box-shadow: $drop-shadow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    height: 140px;
+    width: 140px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.shape-drop-shadow {
+  background-color: #e3e6ec;
+  box-shadow: $drop-shadow;
+}
+
+.shape-inner-shadow {
+  background-color: #e6e9ef;
+  box-shadow: $inset-shadow;
+}
+
+.shape-label {
+  color: #686e71;
+  display: block;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.shape-heading {
+  font-size: 32px;
+  text-align: center;
+}
+
+.shape-attribute-list {
+  font-size: 24px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.shape-attribute-list li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.shape-attribute-key {
+  color: #686e71;
+}
+
+.shape-attribute-value {
+  color: #1d1e1f;
+  font-weight: 700;
+}
+
+// Inspired by Travis Williamson

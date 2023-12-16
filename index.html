@@ -1,0 +1,87 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.scss">
+    <title>Document</title>
+    <style>
+      body,
+      html {
+        cursor: none;
+
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      .div {
+        height: 400px;
+        width: 766px;
+        border-radius: 18px;
+        border: 2px solid #fff;
+        overflow: auto;
+        resize: both;
+      }
+      .custom-cursor {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(200, 83, 255);
+        border-radius: 50%;
+        pointer-events: none;
+        left: 50%;
+        top: 50%;
+      }
+    </style>
+  </head>
+  <body >
+    <div class="custom-cursor"></div>
+    <div class="container">
+      <div class="col">
+        <div class="shape shape-square shape-drop-shadow"></div>
+        <p class="shape-label">Initial</p>
+        <h2 class="shape-heading">drop shadow</h2>
+        <ul class="shape-attribute-list">
+          <li><span class="shape-attribute-key">shadow 1: </span> <span class="shape-attribute-value">255, 255, 255, 0.9</span></li>
+          <li><span class="shape-attribute-key">shadow 2: </span> <span class="shape-attribute-value">50, 58, 73, 0.2</span></li>
+          <li><span class="shape-attribute-key">X and Y:</span> <span class="shape-attribute-value">+/-12px</span></li>
+          <li><span class="shape-attribute-key">blur:</span> <span class="shape-attribute-value">30px</span></li>
+          <li><span class="shape-attribute-key">spread:</span> <span class="shape-attribute-value">5px</span></li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="shape shape-square shape-inner-shadow"></div>
+        <p class="shape-label">Pressed</p>
+        <h2 class="shape-heading">inset shadow</h2>
+        <ul class="shape-attribute-list">
+          <li><span class="shape-attribute-key">shadow 1:</span> <span class="shape-attribute-value">255, 255, 255, 0.9</span></li>
+          <li><span class="shape-attribute-key">shadow 2:</span> <span class="shape-attribute-value">50, 58, 73, 0.2</span></li>
+          <li><span class="shape-attribute-key">X and Y:</span> <span class="shape-attribute-value">+/-12</span></li>
+          <li><span class="shape-attribute-key">blur:</span> <span class="shape-attribute-value">30px</span></li>
+          <li><span class="shape-attribute-key">spread:</span> <span class="shape-attribute-value">5px</span></li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="shape shape-circle shape-inner-shadow"></div>
+        <p class="shape-label">donut shadow</p>
+        <h2 class="shape-heading">circle</h2>
+        <ul class="shape-attribute-list">
+          <li><span class="shape-attribute-key">background:</span> <span class="shape-attribute-value">#ecf0f3</span></li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      // JavaScript to move the curƒsor
+      document.addEventListener("mousemove", function (e) {
+        var cursor = document.querySelector(".custom-cursor");
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+      });
+    </script>
+    <script src="scripts.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+  </body>
+</html>
